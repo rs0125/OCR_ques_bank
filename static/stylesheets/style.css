@@ -144,10 +144,57 @@ h1 {
 .avatar {
     width: 30px;
     height: 30px;
-    background-color: #705697;
+    background-color: #B0A3FF;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
+}
+
+.input-group label {
+    display: block;
+}
+
+.input-group input {
+    width: 40rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+}
+
+.loginbutton {
+    width: 41.1rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #B0A3FF;
+}
+
+.centerkumar {
+    display: flex; flex-direction: row; align-items: center; justify-content: center;
+}
+
+.dropdown .dropbtn {
+    background-color: #B0A3FF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.upload-area {
+    background-color: #3c3c3c;
+    border: 2px dashed #555;
+    border-radius: 5px;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+}
+.upload-icon {
+    font-size: 48px;
+    color: #555;
 }

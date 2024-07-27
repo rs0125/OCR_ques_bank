@@ -1,63 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Review Submission</title>
-    <style>
-        .navbar {
-    background-color: #B0A3FF; /* Light purple background */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-}
+{%extends "layout.html"%}
+{%block content%}
 
-
-.logo-image {
-    height: 40px;
-    padding-left: 0;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    color:#0c0e12;
-    font-weight: 400;
-    margin: 0;
-    padding: 0 50;
-}
-
-
-.nav-links li {
-    margin: 0 52px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 400;
-}
-
-.main-content {
-    text-align: center;
-    margin-top: 100px;
-}
-
-.illustration {
-    max-width: 400px;
-    margin-bottom: 20px;
-}
-
-        body {
-            font-family: Poppins, sans-serif;
-            background-color: #1e1e1e;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-        }
-        
+        <style>
         main {
             padding: 20px;
         }
@@ -69,6 +13,7 @@
         }
         .answer {
             background-color: #333;
+            color: rgb(151, 151, 151);
             padding: 10px;
             border-radius: 5px;
         }
@@ -103,19 +48,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="/"><img src="/static/logo.svg" alt="Logo" class="logo-image"></a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/subjects">Subjects</a></li>
-                <li><a href="/dashboard">Contribute</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <h1>Review Submission</h1>
         <div class="question">
@@ -159,4 +91,4 @@
         </div>
     </main>
 </body>
-</html>
+{% endblock content %}
