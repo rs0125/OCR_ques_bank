@@ -1,5 +1,63 @@
-* {
-    font-family: Poppins;
-    color: white;
-    background-color: black;
+
+
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    background-color: #0c0e12; /* Dark background color */
+    color: white; /* Text color */
+}
+
+.navbar {
+    background-color: #8a5de1; /* Light purple background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+.logo-image {
+    height: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    color:#0c0e12;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 50;
+}
+
+
+
+
+.nav-links li {
+    margin: 0 52px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.illustration {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 500;
+    margin: 0;
+}
+
+.logo{
+    margin-left: 50px;
 }

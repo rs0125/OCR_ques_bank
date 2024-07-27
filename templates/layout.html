@@ -17,21 +17,16 @@
 
 
 <body>
-  <div>
-    
-    <div>
-      <ul>
-        <li><a href="/">Home</a></li>
+  <nav class="navbar">
+    <div class="logo">
+        <a href="/"><img src="/static/logo.svg" alt="Logo" class="logo-image"></a>
+    </div>
+    <ul class="nav-links">
         <li><a href="/subjects">Subjects</a></li>
-        <li><a href="https://github.com/rs0125/Scan_kumar">Contribute</a></li>
+        <li><a href="/dashboard">Contribute</a></li>
         <li><a href="/login">Login</a></li>
-      </ul>
-    </div>
-    <div>
-      
-    </div>
-
-  </div>
+    </ul>
+</nav>
 
   {% block content %} {% endblock %}
 
