@@ -12,6 +12,10 @@ def home():
 def subjects():
     return render_template("subjects.html", title="Subjects", subs = subjectlist)
 
+@app.route("/techeng")
+def techeng():
+    return render_template("questions.html", title="Subjects", subs = subjectlist)
+
 
 @app.route("/login")
 def login():

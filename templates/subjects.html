@@ -2,13 +2,29 @@
 {%block content%}
 
 <body>
-    <input type="search" placeholder="Search">
-    {%for sub in subs%}
-    <div>
-        {{sub[0]}} ---- {{sub[1]}}
-    </div>
-    {%endfor%}
+        </head>
+        <body>
+            <main>
 
-</body>
+                <ul class="subject-list">                
+                
+                    <input type="text" placeholder="Search" class="subject-item search-bar">
+                    
+                    <li class="subject-item active">
+                        <span>Engineering Chemistry (BCHY101L)</span>
+                        <span class="question-count">17 questions available</span>
+                        <!-- <div class="avatar">R</div> -->
+                    </li>
+                    <li class="subject-item">
+                        <span>Engineering Physics (BCHY101L)</span>
+                        <span class="question-count">5 questions available</span>
+                    </li>
+                    <li class="subject-item">
+                        <span>Technical Engilish (BENG101L)</span>
+                        <span class="question-count">5 questions available</span>
+                    </li>
 
-{% endblock content %}
+                </ul>
+            </main>
+        </body>
+        {% endblock content %}

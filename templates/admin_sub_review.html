@@ -1,52 +1,162 @@
-{%extends "layout.html"%}
-{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Review Submission</title>
+    <style>
+        .navbar {
+    background-color: #B0A3FF; /* Light purple background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+.logo-image {
+    height: 40px;
+    padding-left: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    color:#0c0e12;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 50;
+}
+
+
+.nav-links li {
+    margin: 0 52px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.illustration {
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+        body {
+            font-family: Poppins, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .answer {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        select {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            width: 30%;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .cancel {
+            background-color: #ffb3ba;
+        }
+        .submit {
+            background-color: #B0A3FF;
+        }
+    </style>
+</head>
 <body>
-    <h1>Review Submission</h1>
-    <section>
-    <h5>Question 1</h5>
-    <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta explicabo quia nobis tempore, nihil, in temporibus exercitationem deserunt mollitia, consequatur voluptatum quo? Qui quasi deleniti ex voluptates debitis tempora tenetur?
-    </div>
-    </section>
-    <section>
-        <h5>Question 1</h5>
-        <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta explicabo quia nobis tempore, nihil, in temporibus exercitationem deserunt mollitia, consequatur voluptatum quo? Qui quasi deleniti ex voluptates debitis tempora tenetur?
-        </div>
-        </section>
-        <section>
-            <h5>Question 1</h5>
-            <div>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta explicabo quia nobis tempore, nihil, in temporibus exercitationem deserunt mollitia, consequatur voluptatum quo? Qui quasi deleniti ex voluptates debitis tempora tenetur?
+    <header>
+        <div class="logo"></div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="/static/logo.svg" alt="Logo" class="logo-image"></a>
             </div>
-            </section>
-            <section>
-                <h5>Question 1</h5>
-                <div>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta explicabo quia nobis tempore, nihil, in temporibus exercitationem deserunt mollitia, consequatur voluptatum quo? Qui quasi deleniti ex voluptates debitis tempora tenetur?
-                </div>
-                </section>
-                <section>
-        <h5>Question 1</h5>
-        <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta explicabo quia nobis tempore, nihil, in temporibus exercitationem deserunt mollitia, consequatur voluptatum quo? Qui quasi deleniti ex voluptates debitis tempora tenetur?
+            <ul class="nav-links">
+                <li><a href="/subjects">Subjects</a></li>
+                <li><a href="/dashboard">Contribute</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Review Submission</h1>
+        <div class="question">
+            <h3>Question 1</h3>
+            <div class="answer">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
+            </div>
         </div>
-         </section>
-        <ul>
-            Subject code
-        </ul>
-        <ul>Year</ul>
-        <ul>    Exam Type</ul>
-        <button >cancel</button>
-        <button >Submit</button>
-        <label for="cars">Choose a subject:</label>
-
-<select name="Subject code" id="cars">
-  <option value="physics">BPHY101L</option>
-  <option value="english">BENG101L</option>
-  <option value="chemistry">BCHY101L</option>
-  <option value="chemistry">BCHY101L</option>
-</select>
-
+        <div class="question">
+            <h3>Question 2</h3>
+            <div class="answer">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
+            </div>
+        </div>
+        <div class="question">
+            <h3>Question 3</h3>
+            <div class="answer">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
+            </div>
+        </div>
+        <div class="question">
+            <h3>Question 4</h3>
+            <div class="answer">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
+            </div>
+        </div>
+        <div class="form-row">
+            <select>
+                <option>Subject Code</option>
+            </select>
+            <select>
+                <option>Year</option>
+            </select>
+            <select>
+                <option>Exam Type</option>
+            </select>
+        </div>
+        <div class="buttons">
+            <button class="cancel">Cancel</button>
+            <button class="submit">Submit</button>
+        </div>
+    </main>
 </body>
-{% endblock content %}
+</html>

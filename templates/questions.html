@@ -1,33 +1,139 @@
-{%extends "layout.html"%}
-{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical English Communication</title>
+    <!-- <link rel="stylesheet" href="subjects_int.css"> -->
+
+</head>
 <body>
-    <nav class="navbar">
-        
-    </nav>
+    <header>
+        <div class="logo"></div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="/static/logo.svg" alt="Logo" class="logo-image"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/subjects">Subjects</a></li>
+                <li><a href="/dashboard">Contribute</a></li>
+                <li><a href="/login">Login</a></li>
+            </ul>
+        </nav>
+        <style>
 
-    <header class="main-header">
-        <h1>Technical English Communication (BENG101L)</h1>
+.navbar {
+    background-color: #B0A3FF; /* Light purple background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+
+.logo-image {
+  margin-top: 0;
+    height: 40px;
+    padding-left: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    color:#0c0e12;
+    font-weight: 400;
+    margin: 0;
+    padding: 0 50;
+}
+
+
+.nav-links li {
+    margin: 0 52px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+
+.main-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.illustration {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 20px;
+}
+main {
+    padding: 40px;
+    text-align: center;
+}
+h1 {
+    margin-bottom: 30px;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button.active {
+    background-color: #b19cd9;
+}
+.content {
+    background-color: #333;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+        </style>
     </header>
-
-    <section class="content">
-        <div class="category cat-1">
-            <h2>CAT-1</h2>
+    <main>
+        <h1>Technical English Communication (BENG101L)</h1>
+        <div class="button-group">
+            <button class="button active" onclick="setActive(this)">CAT - 1</button>
+            <button class="button" onclick="setActive(this)">CAT - 2</button>
+            <button class="button" onclick="setActive(this)">FAT</button>
         </div>
-
-        <div class="category cat-2">
-            <h2>CAT-2</h2>
+        <div class="content" >
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
         </div>
-        <div class="category cat-2">
-            <h2>FAT</h2>
-        </div>
-    </section>
+    </main>
 
-    
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis aliquid velit soluta natus quisquam quasi unde laboriosam, pariatur optio ad, fugiat rerum similique exercitationem dolores distinctio non temporibus quibusdam!</div>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis aliquid velit soluta natus quisquam quasi unde laboriosam, pariatur optio ad, fugiat rerum similique exercitationem dolores distinctio non temporibus quibusdam!</div>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis aliquid velit soluta natus quisquam quasi unde laboriosam, pariatur optio ad, fugiat rerum similique exercitationem dolores distinctio non temporibus quibusdam!</div>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis aliquid velit soluta natus quisquam quasi unde laboriosam, pariatur optio ad, fugiat rerum similique exercitationem dolores distinctio non temporibus quibusdam!</div>
-    
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quis aliquid velit soluta natus quisquam quasi unde laboriosam, pariatur optio ad, fugiat rerum similique exercitationem dolores distinctio non temporibus quibusdam!</div>
+    <script>
+        function setActive(button) {
+            // Remove 'active' class from all buttons
+            document.querySelectorAll('.button').forEach(btn => btn.classList.remove('active'));
+            // Add 'active' class to the clicked button
+            button.classList.add('active');
+        }
+    </script>
 </body>
-{% endblock content %}
+</html>
