@@ -1,8 +1,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
-
-
+subjectlist = [["Engineering chemistry (BCHY101L) ", "17 questions avaliable"], ["Engineering Physics (BPHY101L) ", "17 questions avaliable"]]
 
 @app.route("/")
 @app.route("/home")
@@ -11,7 +10,7 @@ def home():
 
 @app.route("/subjects")
 def subjects():
-    return render_template("subjects.html", title="Subjects")
+    return render_template("subjects.html", title="Subjects", subs = subjectlist)
 
 
 @app.route("/login")

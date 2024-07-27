@@ -1,37 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subjects</title>
-</head>
-<body>
-    <input type = "search" placeholder = "Search">
-    <div>
-        Engineering chemistry (BCHY101L)  17 questions avaliable
-    </div>
-    <div>
-        Engineering physics (BCHY101L)  9 questions avaliable
-    </div>
-    <div>
-        Technical english (BENG101L)  5 questions avaliable
-    </div>
-    <div>
-        Engineering chemistry (BCHY101L)  5 questions avaliable
-    </div>
-    <div>
-        Engineering chemistry (BCHY101L)  5 questions avaliable
-    </div>
-    <div>
-        Technical english (BCHY101L)  17 questions avaliable
-    </div>
-    <div>
-        Engineering chemistry (BCHY101L)  20 questions avaliable
-    </div>
-    <div>
-        Engineering physics (BPHY101L)  15 questions avaliable
-    </div>
-      
-</body>
-</html>
+{%extends "layout.html"%}
+{%block content%}
 
+<body>
+    <input type="search" placeholder="Search">
+    {%for sub in subs%}
+    <div>
+        {{sub[0]}} ---- {{sub[1]}}
+    </div>
+    {%endfor%}
+
+</body>
+
+{% endblock content %}
