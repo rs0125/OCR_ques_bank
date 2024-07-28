@@ -50,7 +50,7 @@ ul {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #1e1e1e;
     color: #ffffff;
     margin: 0;
@@ -96,6 +96,16 @@ h1 {
     text-align: left;
 }
 
+.forumcontent {
+    background-color: #333;
+    padding: 20px;
+    max-width: 50%;
+    
+    margin: 0 auto;
+    margin-top: 1%;
+    
+    text-align: left;
+}
 
 .search-bar {
     height: 25px;
@@ -103,6 +113,13 @@ h1 {
     background-color: #333;
     padding: 10px;
     display: flex;
+    border-radius: 5px;
+    background-color: #333;
+    margin-bottom: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 5px;
 
     
@@ -128,9 +145,8 @@ h1 {
     align-items: center;
     border-radius: 5px;
 }
-.subject-item.active {
+.subject-item:hover {
     background-color: #B0A3FF; 
-    ;
 }
 
 .subject-item.active span{

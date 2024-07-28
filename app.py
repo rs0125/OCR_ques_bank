@@ -27,9 +27,16 @@ def login():
 def dashboard():
     return render_template("admin_dashboard.html", title="Dashboard")
 
+@app.route("/forum")
+def forum():
+    return render_template("forum.html", title="Forum")
+
+
 
 @app.route("/review", methods=['POST'])
 def review():
+    image = request.files['imageUpload']
+    print(image)
     option = request.form['options']
     return render_template("admin_sub_review.html", title="review submission", sem=option)
 
