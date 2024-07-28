@@ -1,94 +1,133 @@
 {%extends "layout.html"%}
 {%block content%}
 
-        <style>
-        main {
-            padding: 20px;
-        }
-        h1 {
-            margin-bottom: 20px;
-        }
-        .question {
-            margin-bottom: 20px;
-        }
-        .answer {
-            background-color: #333;
-            color: rgb(151, 151, 151);
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .form-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        select {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            width: 30%;
-        }
-        .buttons {
-            display: flex;
-            justify-content: space-between;
-        }
-        button {
-            width: 48%;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .cancel {
-            background-color: #ffb3ba;
-        }
-        .submit {
-            background-color: #B0A3FF;
-        }
-    </style>
+<style>
+    * {
+        font-family: Poppins, sans-serif;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    .question {
+        margin-bottom: 20px;
+    }
+
+    .answer {
+        background-color: #333;
+        color: rgb(151, 151, 151);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    select {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        width: 30%;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        width: 48%;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .cancel {
+        background-color: #ffb3ba;
+    }
+
+    .submit {
+        background-color: #B0A3FF;
+    }
+
+    select,
+    button {
+        width: 50%;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 25%;
+        border: none;
+    }
+
+    select {
+        background-color: #3c3c3c;
+        color: #fff;
+    }
+
+    input {
+        width: 50%;
+        margin-left: 25%;
+        background-color: #3c3c3c;
+        color: black;
+        padding: 3% 0px;
+        margin-bottom: 10px;
+    }
+    label{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+</style>
 </head>
+
 <body>
-    <main>
-        <h1>Review Submission</h1>
-        <div class="question">
-            <h3>Question 1</h3>
-            <div class="answer">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
-            </div>
-        </div>
-        <div class="question">
-            <h3>Question 2</h3>
-            <div class="answer">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
-            </div>
-        </div>
-        <div class="question">
-            <h3>Question 3</h3>
-            <div class="answer">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
-            </div>
-        </div>
-        <div class="question">
-            <h3>Question 4</h3>
-            <div class="answer">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto veritatis et quasi architecto
-            </div>
-        </div>
-        <div class="form-row">
-            <select>
-                <option>Subject Code</option>
-            </select>
-            <select>
-                <option>Year</option>
-            </select>
-            <select>
-                <option>Exam Type</option>
-            </select>
-        </div>
-        <div class="buttons">
-            <button class="cancel">Cancel</button>
-            <button class="submit">Submit</button>
-        </div>
-    </main>
+    <h1 class="centerkumar" style="margin: 2% 0%;  font-size: 48px;">Review Submission</h1>
+    <form action="/subjects" method="post" enctype="multipart/form-data">
+
+        <label for="input1" class="centerkumar" >Question 1</label> 
+        <input type="text" id="input1" name="input1">
+
+        <label for="input1" class="centerkumar">Question 2</label>
+        <input type="text" id="input2" name="input2" style=>
+
+        <label for="input1" class="centerkumar">Question 3</label>
+        <input type="text" id="input3" name="input3" style=>
+
+
+
+
+        <select id="options" name="subject" style="border: none;">
+            <option value="NULL" disabled selected="selected">Choose Subject</option>
+            <option value="BENG101L">Technical English Communication --- BENG101L</option>
+            <option value="BCHY101L">Engineering Chemistry --- BCHY101L</option>
+        </select>
+
+        <select id="options" name="sem" style="border: none;">
+            <option value="Choose Semester" disabled selected="selected">Choose Semester</option>
+            <option value="Fall Sem 2024">Fall Sem 2024</option>
+            <option value="Winter Sem 2023">Winter Sem 2023</option>
+            <option value="Fall Sem 2023">Fall Sem 2023</option>
+            <option value="Winter Sem 2023">Winter Sem 2023</option>
+        </select>
+
+        <select id="options" name="exam" style="border: none;">
+            <option value="NULL" disabled selected="selected">Choose Exam Type</option>
+            <option value="CAT1">CAT1</option>
+            <option value="CAT2">CAT2</option>
+            <option value="FAT">FAT</option>
+        </select>
+        <input type="submit" value="Submit" class="button"
+            style="width: 50%; margin-left: 25%; background-color: #B0A3FF; color: black; margin-top: 10px;">
+    </form>
 </body>
 {% endblock content %}

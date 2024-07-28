@@ -1,16 +1,17 @@
 {%extends "layout.html"%}
 {%block content%}
+
 <body>        <h2 class="centerkumar" style="margin-top: 10%; font-size: 48px;">Admin Login</h2>
     <div class="login-container centerkumar" >
 
         <form action="/submit-login" method="post">
             <div class="input-group centrekumar">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <label for="username" style="margin: 5px;">Username</label>
+                <input type="text" id="username" name="username" required style="background-color: #3c3c3c; color: white;">
             </div>
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <div class="input-group" >
+                <label for="password" style="margin: 5px;">Password</label>
+                <input type="password" id="password" name="password" required style="background-color: #3c3c3c; color: white;"> 
             </div>
             <button class="loginbutton" type="submit">Log in</button>
         </form>

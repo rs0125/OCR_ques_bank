@@ -2,22 +2,14 @@
 {%block content%}
 
 <style>
+    *{
+        font-family: Poppins, sans-serif;
+    }
     .main-content {
     text-align: center;
     margin-top: 100px;
 }
 
-.illustration {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
-
-
-body {
-    background-color: #2d2d2d;
-    color: #fff;
-    font-family: Arial, sans-serif;
-}
 
 .container {
     width: 80%;
@@ -50,82 +42,41 @@ p {
     padding-left: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-}
 
 
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px);
-}
-.upload-container {
-    background-color: #2c2c2c;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-}
-h1 {
-    margin-top: 0;
-    font-size: 1.2em;
-}
-.upload-area {
-    background-color: #3c3c3c;
-    border: 2px dashed #555;
-    border-radius: 5px;
-    padding: 40px 20px;
-    margin-bottom: 20px;
-}
-.upload-icon {
-    font-size: 48px;
-    color: #555;
-}
 select, button {
-    width: 100%;
+    width: 50%;
     padding: 10px;
     margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 25%;
+    border: none; 
 }
 select {
     background-color: #3c3c3c;
     color: #fff;
 }
-button {
-    background-color: #B0A3FF;
-    ;
-    color: #000;
-    cursor: pointer;
-}
-button:hover {
-    background-color: #B0A3FF;
-}
+
 
 </style>
 <body>
+    <h1 class="centerkumar" style="margin-top: 8%;">Upload your Question Paper</h1>
+    <form action="/review" method="post" enctype="multipart/form-data">
 
-    <div class="container">
-        <div class="card" placeholder = "">
-             <input type= "file">
-            <h3>Upload Your Question Paper</h3>
-            
-                <div class="dropdown">
-                    <button class="dropbtn">Dropdown</button>
-                    <div class="dropdown-content">
-                      <ul href="#">Link 1</ul>
-                      <ul href="#">Link 2</ul>
-                      <ul href="#">Link 3</ul>
-                    </div>
-                  </div>
-        </div>
-    </div>
+        <label style="background-color: #3c3c3c; width: 50%; height: 300px; margin-left: 25%;" class="centerkumar">
+            <img src="/static/imageupload.svg" alt="" style="margin-left: 27%; max-width: 120px;">
+        <input type="file" style="visibility: hidden;"/>
+       </label>
+        <select id="options" name="options" style="border: none;">
+            <option value="Choose Semester" disabled selected="selected">Choose Semester</option>
+            <option value="Fall Sem 2024">Fall Sem 2024</option>
+            <option value="Winter Sem 2023">Winter Sem 2023</option>
+            <option value="Fall Sem 2023">Fall Sem 2023</option>
+            <option value="Winter Sem 2023">Winter Sem 2023</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" class="button" style="width: 50%; margin-left: 25%; background-color: #B0A3FF; color: black;">
+    </form>
 </body>
 {% endblock content %}

@@ -1,20 +1,21 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
-subjectlist = [["Engineering chemistry (BCHY101L) ", "17 questions avaliable"], ["Engineering Physics (BPHY101L) ", "17 questions avaliable"]]
+
 
 @app.route("/")
 @app.route("/home")
 def home():
     return render_template("index.html", title="Scan Kumar")
 
+@app.route("/review", methods=['GET'])
 @app.route("/subjects")
 def subjects():
-    return render_template("subjects.html", title="Subjects", subs = subjectlist)
+    return render_template("subjects.html", title="Subjects")
 
 @app.route("/techeng")
 def techeng():
-    return render_template("questions.html", title="Subjects", subs = subjectlist)
+    return render_template("questions.html", title="Subjects")
 
 
 @app.route("/login")
@@ -27,9 +28,10 @@ def dashboard():
     return render_template("admin_dashboard.html", title="Dashboard")
 
 
-@app.route("/review")
+@app.route("/review", methods=['POST'])
 def review():
-    return render_template("admin_sub_review.html", title="Review Submission")
+    option = request.form['options']
+    return render_template("admin_sub_review.html", title="review submission", sem=option)
 
 
 
