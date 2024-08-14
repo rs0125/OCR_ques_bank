@@ -92,16 +92,10 @@
 
 <body>
     <h1 class="centerkumar" style="margin: 2% 0%;  font-size: 48px;">Review Submission</h1>
-    <form action="/subjects" method="post" enctype="multipart/form-data">
+    <form action="/subjects" method="GET" enctype="multipart/form-data">
 
         <label for="input1" class="centerkumar" >Question 1</label> 
-        <input type="text" id="input1" name="input1">
-
-        <label for="input1" class="centerkumar">Question 2</label>
-        <input type="text" id="input2" name="input2" style=>
-
-        <label for="input1" class="centerkumar">Question 3</label>
-        <input type="text" id="input3" name="input3" style=>
+        <textarea type="text" id="input1" name="input1" style="width: 50%; margin-left: 25%; color: white; background-color: #333; height: 300px;">{{extracted_text}}</textarea>
 
 
 

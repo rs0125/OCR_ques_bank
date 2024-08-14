@@ -1,6 +1,7 @@
 {%extends "layout.html"%}
 {%block content%}
 
+
 <style>
     *{
         font-family: Poppins, sans-serif;
@@ -66,7 +67,9 @@ select {
 
         <label style="background-color: #3c3c3c; width: 50%; height: 300px; margin-left: 25%;" class="centerkumar">
             <img src="/static/imageupload.svg" alt="" style="margin-left: 27%; max-width: 120px;">
-        <input type="file" style="visibility: hidden;"/>
+        <input type="file" style="visibility: hidden;" class="form-control-file" name="file"/>
+        
+        
        </label>
         <select id="options" name="options" style="border: none;">
             <option value="Choose Semester" disabled selected="selected">Choose Semester</option>
